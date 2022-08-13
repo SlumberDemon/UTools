@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_elements import media
+from streamlit_elements import media, mui
 
 media_url = st.text_input("Media url", value="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 with mui.Card(key="media", sx={"display": "flex", "flexDirection": "column"}):
