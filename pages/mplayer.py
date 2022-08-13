@@ -1,6 +1,17 @@
 import streamlit as st
 from streamlit_elements import media, mui, dashboard, elements
 
+st.markdown(
+    """
+# MPlayer
+Watch videos
+"""
+)
+st.sidebar.markdown(
+    """# MPlayer
+Watch videos"""
+)
+
 layout = [
     dashboard.Item("media", 0, 2, 12, 4),
 ]
