@@ -5,10 +5,8 @@ st.markdown("# UTools")
 st.sidebar.markdown("# UTools")
 
 st.write("Use the side menu to select a tool to use!")
-st.markdown(
-    """## Tools: \n
-⬩ Udownload | Download videos \n
-⬩ SleepyTube | Watch videos without restricitons"""
-)
+with st.expander("About the tools"):
+    st.write("""⬩ Udownload | Download videos \n""")
+    st.write("""⬩ SleepyTube | Watch videos without restricitons""")
 
 st.caption("[Source](https://github.com/SlumberDemon/UTools)")
