@@ -1,6 +1,10 @@
 import streamlit as st
 from streamlit_elements import media, mui, dashboard, elements
 
+layout = [
+    dashboard.Item("media", 0, 2, 12, 4),
+]
+
 with elements("mplayer"):
     with dashboard.Grid(layout, draggableHandle=".draggable"):
         with mui.Card(key="media", sx={"display": "flex", "flexDirection": "column"}):
