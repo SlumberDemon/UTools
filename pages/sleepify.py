@@ -47,8 +47,8 @@ if QUERY:
                     with a1:
                         st.image(i["album"]["images"][1]["url"])
                     with a2:
-                        st.header(
-                            f"[{i['album']['name']}](i['album']['external_urls']['spotify'])"
+                        st.markdown(
+                            f"# [`{i['album']['name']}`]({i['album']['external_urls']['spotify']})"
                         )
                         for a in i["artists"]:
                             st.write(a["name"])
@@ -69,6 +69,8 @@ if QUERY:
                     with a1:
                         st.image(i["images"][0]["url"])
                     with a2:
-                        st.markdown(f"# [{i['name']}](i['external_urls']['spotify'])")
+                        st.markdown(
+                            f"# [`{i['name']}`]({i['external_urls']['spotify']})"
+                        )
                         st.write(f"Followers: {i['followers']['total']}")
                         st.write(f"Popularity: {i['popularity']}")
