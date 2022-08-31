@@ -1,14 +1,14 @@
 import streamlit as st
-from streamlit_elements import media, mui, dashboard, elements
+from streamlit_elements import dashboard, elements, media, mui
 
 st.markdown(
     """
-# MPlayer
+# YPlayer
 Watch videos
 """
 )
 st.sidebar.markdown(
-    """# MPlayer
+    """# YPlayer
 Watch videos"""
 )
 
