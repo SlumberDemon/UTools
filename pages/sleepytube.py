@@ -1,8 +1,8 @@
 import time
+
 import aiotube
 import streamlit as st
 from pytube import YouTube
-
 
 st.markdown(
     """
@@ -24,12 +24,7 @@ QUERY = st.text_input(
 
 
 AMOUNT = st.slider(
-    label='Video(s)',
-    min_value=1,
-    max_value=25,
-    value=5,
-    step=1,
-    key="amount"
+    label="Video(s)", min_value=1, max_value=25, value=5, step=1, key="amount"
 )
 
 
@@ -39,7 +34,7 @@ if QUERY:
             videos = aiotube.Search.videos(QUERY, int(AMOUNT))
             for video in videos.values():
                 c = st.container()
-                yt = YouTube(video['url'])
+                yt = YouTube(video["url"])
                 for stream in yt.streams.filter(
                     file_extension="mp4",
                     type="video",
@@ -56,7 +51,7 @@ if QUERY:
                                 _bytes = f.read()
                             c.video(_bytes, format="video/mp4")
                         except:
-                            c.header('Video not available')
+                            c.header("Video not available")
                 c.markdown(f"[`{video['title']}`]({video['url']})")
                 with st.spinner("Searching for more videos..."):
                     time.sleep(4)

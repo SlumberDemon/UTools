@@ -1,8 +1,8 @@
 import time
-import validators
-import streamlit as st
-from pytube import YouTube
 
+import streamlit as st
+import validators
+from pytube import YouTube
 
 st.markdown(
     """
@@ -33,7 +33,7 @@ if URL:
             "Make sure the url is in this format: https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         )
 
-type = st.radio("Type", ("mp3", "mp4"), disabled=video)
+type = st.radio("Type", ("mp3", "mp4"))
 
 if type and URL:
     yt = YouTube(URL)
