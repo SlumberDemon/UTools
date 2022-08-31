@@ -58,7 +58,7 @@ if QUERY:
 
             headers = {
                 "Accept": "application/json",
-                "Authorization": "Bearer BQD3yDpWhQv-gWrssanLct4Pkaa1nk7T96OQFPuGHBDHROB1KX8CHm_p7bMV9Ir0dLfSSkX-2AK5C81rut7lHirW2lFQSuDunvxN9lamXsUZcIzXZyE",
+                "Authorization": "Bearer " + TOKEN,
             }
 
             response = requests.get(url, headers=headers)
